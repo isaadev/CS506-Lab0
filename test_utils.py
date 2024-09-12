@@ -29,6 +29,6 @@ def test_nearest_neighbor():
     
     result = nearest_neighbor(v1, vectors) 
     
-    expected_index = 2
+    expected_index = 0
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"

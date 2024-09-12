@@ -8,7 +8,7 @@ def dot_product(v1, v2):
     return the scalar dor product of the two vectors.
     # Hint: use `np.dot`.
     '''
-	return np.dot(v1,v2)
+    return np.dot(v1,v2)
     
 def cosine_similarity(v1, v2):
     '''
@@ -26,9 +26,9 @@ def cosine_similarity(v1, v2):
     
     # Hint: Use `dot_product` and `np.linalg.norm`.
     '''
-	dotProd = dot_product(v1, v2) 
-	sol = dotProd / (np.linalg.norm(v1) * np.linalg.norm(v2)) 
-	return sol 
+    dotProd = dot_product(v1, v2) 
+    sol = dotProd / (np.linalg.norm(v1) * np.linalg.norm(v2)) 
+    return sol 
  
 def nearest_neighbor(target_vector, vectors):
     '''
@@ -40,14 +40,13 @@ def nearest_neighbor(target_vector, vectors):
     # Hint: You should use the cosine_similarity function that you already wrote.
     # Hint: For this lab, you can just use a for loop to iterate through vectors.
     '''
-    ### YOUR CODE HERE
 	
-	most_similar = -999
-	most_similar_idx = -999
+    most_similar = -999
+    most_similar_idx = -999
 	
-	for	index, vct in enumerate(vectors):
-		similarity = cosine_similarity(target_vector, vct)
-		if similarity > most_similar:
-			most_similar = similarity
-			most_similar_idx = index
-	return most_similar_idx
+    for	index, vct in enumerate(vectors):
+        similarity = cosine_similarity(target_vector, vct)
+        if similarity > most_similar:
+            most_similar = similarity
+            most_similar_idx = index
+        return most_similar_idx
